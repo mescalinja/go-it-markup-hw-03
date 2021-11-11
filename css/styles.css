@@ -283,7 +283,7 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-item:not(last-child) {
+.team-item:not(:last-child) {
   margin-right: 30px;
 }
 
