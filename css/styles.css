@@ -188,7 +188,6 @@ img {
 
 .hero-btn {
   display: flex;
-  justify-content: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
@@ -220,7 +219,7 @@ img {
   display: flex;
 }
 
-.about-item:not(last-child) {
+.about-item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -262,7 +261,7 @@ img {
   margin-top: 50px;
 }
 
-.we-do-item:not(last-child) {
+.we-do-item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -373,7 +372,7 @@ img {
   justify-content: center;
 }
 
-.products-nav-item:not(last-child) {
+.products-nav-item:not(:last-child) {
   margin-right: 8px;
 }
 
