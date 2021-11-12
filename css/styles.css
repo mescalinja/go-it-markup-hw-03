@@ -46,6 +46,8 @@ body {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .list {
@@ -81,8 +83,8 @@ img {
 
 .header-logo {
   display: block;
-  margin-top: 24px;
-  margin-bottom: 25px;
+  padding-top: 24px;
+  padding-bottom: 25px;
   margin-right: 93px;
 }
 
@@ -120,27 +122,29 @@ img {
 
 .header-nav {
   display: flex;
+  margin-right: auto;
 }
 
 .header-item:not(:last-child) {
   margin-right: 50px;
 }
 
-.header-contact {
-  display: flex;
-  margin-left: auto;
-}
-
-.header-contact-item:not(:last-child) {
-  margin-right: 50px;
-}
-
 .header-link {
+  padding: 32px 0 32px 0;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--black-color);
+}
+
+.header-contact {
+  display: flex;
+}
+
+.header-contact-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .header-link:hover,
@@ -155,6 +159,8 @@ img {
 
 .header-mail,
 .header-tel {
+  padding: 32px 0 32px 0;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -166,7 +172,6 @@ img {
 
 .hero {
   background-color: var(--dark-gray-color);
-  text-align: center;
 }
 
 .hero.section {
@@ -175,6 +180,11 @@ img {
 }
 
 .hero-title {
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 696px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -188,8 +198,7 @@ img {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
-  padding: 10px 32px 10px 32px;
+  padding: 10px 32px;
 
   font-family: inherit;
   font-weight: 700;
@@ -219,7 +228,7 @@ img {
 }
 
 .about-item {
-  width: calc((100%-60) / 4);
+  flex-basis: calc((100% - 60px) / 4);
 }
 
 .about-item:not(:last-child) {
@@ -227,6 +236,8 @@ img {
 }
 
 .about-item-title {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -236,8 +247,6 @@ img {
 }
 
 .about-item-text {
-  margin-top: 10px;
-
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -251,6 +260,8 @@ img {
 }
 
 .we-do-title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -261,7 +272,6 @@ img {
 
 .we-do-list {
   display: flex;
-  margin-top: 50px;
 }
 
 .we-do-item:not(:last-child) {
@@ -269,7 +279,7 @@ img {
 }
 
 .we-do-item {
-  width: calc((100%-60px) / 3);
+  flex-basis: calc((100% - 60px) / 3);
 }
 
 /* .............TEAM................ */
@@ -278,13 +288,23 @@ img {
   background-color: var(--ash-color);
 }
 
+.team-title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--black-color);
+}
+
 .team-list {
   display: flex;
-  margin-top: 50px;
 }
 
 .team-item {
-  width: calc((100%-60px) / 4);
+  flex-basis: calc((100% - 60px) / 4);
 
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -296,33 +316,25 @@ img {
   margin-right: 30px;
 }
 
-.team-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+.team-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
   text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--black-color);
 }
 
 .team-name {
-  padding-top: 30px;
+  margin-bottom: 10px;
 
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
   letter-spacing: 0.03em;
   color: var(--black-color);
 }
 
 .team-job {
-  padding-top: 10px;
-  padding-bottom: 30px;
-
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
   letter-spacing: 0.03em;
   color: var(--gray-color);
 }
@@ -340,8 +352,9 @@ img {
   padding-bottom: 60px;
 }
 
-.footer-address {
-  margin-top: 20px;
+.footer-logo {
+  display: flex;
+  margin-bottom: 20px;
 }
 
 .footer-item:not(:last-child) {
@@ -379,6 +392,7 @@ img {
 .products-nav {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .products-nav-item:not(:last-child) {
@@ -414,11 +428,10 @@ img {
 .products-list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 50px;
 }
 
 .products-item {
-  width: calc((100%-60px) / 3);
+  flex-basis: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
 }
@@ -432,9 +445,6 @@ img {
 }
 
 .products-item-title {
-  margin-left: 24px;
-  padding-top: 20px;
-
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -443,10 +453,6 @@ img {
 }
 
 .products-item-text {
-  margin-left: 24px;
-  margin-top: 4px;
-  margin-bottom: 20px;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
@@ -457,4 +463,5 @@ img {
 .border-wrap {
   border: 1px solid #eeeeee;
   border-top: 0px;
+  padding: 20px 24px;
 }
